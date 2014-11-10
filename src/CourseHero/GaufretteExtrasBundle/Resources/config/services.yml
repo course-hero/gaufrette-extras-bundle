@@ -1,0 +1,5 @@
+services:
+
+    course_hero.gaufrette_extras.adapter.readthrough:
+      class: CourseHero\GaufretteExtras\Adapter\ReadthroughAdapter
+      abstract: true
