@@ -5,9 +5,21 @@ php:
   - 5.4
   - 5.3
   - hhvm
+
+env:
+  - SYMFONY_VERSION=2.2.*
+  - SYMFONY_VERSION=2.3.*
+  - SYMFONY_VERSION=2.4.*
+  - SYMFONY_VERSION=2.5.*
+
 install:
   - composer install
+
+before_script:
+  - composer require symfony/framework-bundle:${SYMFONY_VERSION}
+
 script:
   - phpunit --coverage-text
+
 after_script:
   - php vendor/bin/coveralls -v
