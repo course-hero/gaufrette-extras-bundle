@@ -1,6 +1,0 @@
-services:
-
-    course_hero.gaufrette_extras.adapter.factory.readthrough:
-      class: CourseHero\GaufretteExtrasBundle\DependencyInjection\Factory\ReadthroughAdapterFactory
-      tags:
-        - { name: gaufrette.adapter.factory }

@@ -40,7 +40,6 @@ class ReadthroughAdapterFactory implements Factory\AdapterFactoryInterface
             ->children()
                 ->scalarNode('primary')->isRequired()->cannotBeEmpty()->end()
                 ->scalarNode('fallback')->isRequired()->cannotBeEmpty()->end()
-
             ->end()
         ;
     }

@@ -1,0 +1,15 @@
+knp_gaufrette:
+    adapters:
+        foo_one:
+            in_memory: ~
+        foo_two:
+            in_memory: ~
+        foo_readthrough:
+            readthrough:
+                primary: foo_one
+                fallback: foo_two
+
+    filesystems:
+        foo:
+            adapter:        foo_readthrough
+            alias:          foo_filesystem
